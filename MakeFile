@@ -1,0 +1,22 @@
+CC = gcc
+CFLAGS = -Wall -Iinclude
+SRC = src/main.c src/calculator.c
+OBJ = $(SRC:.c=.o)
+TARGET = calculator_app
+LIB = libcalculator.a
+
+all: $(TARGET)
+
+$(LIB): src/calculator.o
+	$(AR) rcs $@ $^
+
+$(TARGET): $(OBJ) $(LIB)
+	$(CC) $(CFLAGS) -o $@ $(OBJ) -L. -lcalculator
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJ) $(TARGET) $(LIB)
+
+.PHONY: clean all

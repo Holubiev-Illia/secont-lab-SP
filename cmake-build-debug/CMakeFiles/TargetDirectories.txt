@@ -1,0 +1,4 @@
+D:/untitled1/cmake-build-debug/CMakeFiles/calculator.dir
+D:/untitled1/cmake-build-debug/CMakeFiles/calculator_app.dir
+D:/untitled1/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/untitled1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
